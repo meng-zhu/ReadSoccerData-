@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script type="text/javascript" src="/ReadSoccerData/jquery.js"></script>
+        <script type="text/javascript">
+          // window.setInterval(immediat(), 20);
+            // setInterval(immediat(), 5000);//每10秒刷新夜面
+            $(document).ready(immediat);
+            var int=self.setInterval("immediat()",60000)//每60秒執行一次
+            function immediat(){
+                // var test = $("#showInfo").text();
+                // alert(test);
+                 $.get("setData.php",function(data){
+                    //  alert(data);
+                     $("#showInfo").html(data);
+                 })
+            }
+        </script>
+        <title>ReadSoccerData</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="showInfo"><h1><center>資料讀取中...</center></h1></div>
+    </body>
+</html>
